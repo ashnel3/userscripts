@@ -18,6 +18,8 @@ const mode: 'development' | 'production' =
  */
 const devtool = process.env.DEVTOOL
 
+/** Script author */
+const author = process.env.npm_package_author ?? '???'
 /** Script namespace */
 const namespace = process.env.npm_package_homepage ?? '???'
 /** Script license */
@@ -29,6 +31,7 @@ export const userscriptMetadata: Record<string, UserscriptMetadata> = {
     description: 'Download khinsider albums',
     name: 'khinsider-album-dl',
     namespace,
+    author,
     icon: 'https://downloads.khinsider.com/images/favicon.ico',
     grant: ['GM_download'],
     match: 'https://downloads.khinsider.com/game-soundtracks/album/*',
