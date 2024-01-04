@@ -39,6 +39,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Update README
+        run: pnpm readme dist
+
       - name: Publish
         uses: s0/git-publish-subdir-action@develop
         env:
