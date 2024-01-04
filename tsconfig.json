@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "jsx": "preserve",
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "skipDefaultLibCheck": true
+  },
+  "include": ["node_modules/@violentmonkey/types", "**/*"]
+}
