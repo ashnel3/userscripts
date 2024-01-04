@@ -2,6 +2,7 @@
 // @description Download khinsider albums
 // @name khinsider-album-dl
 // @namespace https://github.com/ashnel3/userscripts#readme
+// @author ashnel3
 // @icon https://downloads.khinsider.com/images/favicon.ico
 // @grant GM_download
 // @match https://downloads.khinsider.com/game-soundtracks/album/*
