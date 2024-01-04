@@ -1,8 +1,10 @@
 # userscripts
 
-Miscellaneous userscripts
+[![Workflow Status](https://img.shields.io/github/actions/workflow/status/ashnel3/userscripts/main.yml?label=tests)](https://github.com/ashnel3/userscripts/actions) ![GitHub Stars](https://img.shields.io/github/stars/ashnel3/userscripts)
 
-### Requirements
+Miscellaneous Userscripts.
+
+### Requirements:
 
 A userscript manager:
 
@@ -10,8 +12,8 @@ A userscript manager:
 - [GreaseMonkey](https://www.greasespot.net/)
 - [TamperMonkey](https://www.tampermonkey.net/)
 
-### Scripts
+### Scripts:
 
-| Name               | Install                                                                                |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| khinsider-album-dl | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-album-dl.user.js) |
+| Name               | Description               | Install                                                                                | Version |
+| ------------------ | ------------------------- | -------------------------------------------------------------------------------------- | ------- |
+| khinsider-album-dl | Download khinsider albums | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-album-dl.user.js) | 1.0.0   |

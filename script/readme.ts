@@ -6,21 +6,23 @@ import { userscriptMetadata } from '../webpack.config'
 /** Template README */
 const tREADME = (): string => {
   return `# userscripts
-Miscellaneous userscripts
+[![Workflow Status](https://img.shields.io/github/actions/workflow/status/ashnel3/userscripts/main.yml?label=tests)](https://github.com/ashnel3/userscripts/actions) ![GitHub Stars](https://img.shields.io/github/stars/ashnel3/userscripts)
 
-### Requirements
+Miscellaneous Userscripts.
+
+### Requirements:
 A userscript manager:
   - [ViolentMonkey](https://violentmonkey.github.io/) _(recommended)_
   - [GreaseMonkey](https://www.greasespot.net/)
   - [TamperMonkey](https://www.tampermonkey.net/)
 
-### Scripts
-| Name | Install |
+### Scripts:
+| Name | Description | Install | Version |
 |---|---|
 ${Object.entries(userscriptMetadata)
   .map(
     ([name, meta]) =>
-      `| ${name} | [install](https://github.com/ashnel3/userscripts/raw/build/${name}.user.js) |`,
+      `| ${name} | ${meta.description} | [install](https://github.com/ashnel3/userscripts/raw/build/${name}.user.js) | ${meta.version}`,
   )
   .join('\n')}
 `
