@@ -23,13 +23,13 @@ export const createElement = <T extends keyof HTMLElementTagNameMap>(
 
 export const styleElement = <T extends HTMLElement>(
   e: T,
-  styles: ElementStyleOptions = {},
-  classList: string[] = [],
+  styles?: ElementStyleOptions,
+  classList?: string[],
 ): T => {
-  classList.forEach((className) => {
+  classList?.forEach((className) => {
     e.classList.add(className)
   })
-  Object.entries(styles).forEach(([key, value]) => {
+  Object.entries(styles ?? {}).forEach(([key, value]) => {
     if (typeof value === 'string') {
       e.style.setProperty(key, value)
     }

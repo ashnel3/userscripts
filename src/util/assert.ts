@@ -18,10 +18,13 @@ export const assert = <T>(expr: T, msg: string): NonNullable<T> => {
  * @param msg      Error message
  * @returns        Element
  */
-export const assertElement = <T extends Element>(selector: string, msg: string): T => {
+export const assertElement = <T extends Element = HTMLElement>(
+  selector: string,
+  msg?: string,
+): T => {
   const e = document.querySelector<T>(selector)
   if (e instanceof Element) {
     return e
   }
-  throw new Error(msg)
+  throw new Error(msg ?? `Assertion Failed! unable to find element at "${selector}"!`)
 }

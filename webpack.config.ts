@@ -38,7 +38,7 @@ export const userscriptMetadata: Record<string, UserscriptMetadata> = {
     exclude: 'https://downloads.khinsider.com/game-soundtracks/album/**/*',
     'run-at': 'document-end',
     copyright,
-    version: '1.0.0',
+    version: '1.0.1',
   },
 }
 
