@@ -11,7 +11,7 @@
     "lint": "pnpm run /^lint:.*/",
     "lint:es": "eslint --ext=.js,.ts .",
     "lint:fmt": "prettier --list-different \"**/*.{md,cjs,js,json,ts,yaml,yml}\"",
-    "readme": "pnpm vite-node script/readme.ts",
+    "readme": "pnpm vite-node script/createReadme.ts",
     "test": "vitest --run",
     "prepare": "husky install"
   },
