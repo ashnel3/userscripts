@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Miscellaneous userscripts",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "cross-env DEVTOOL=inline-cheap-source-map NODE_ENV=development webpack --watch",
     "clean": "rimraf dist/",
