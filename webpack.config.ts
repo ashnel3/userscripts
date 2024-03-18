@@ -1,8 +1,8 @@
-import { BannerPlugin as BannerWebpackPlugin } from 'webpack'
 import TerserWebpackPlugin from 'terser-webpack-plugin'
-import metadata, { type UserscriptMetadata } from './src/util/metadata'
+import { BannerPlugin, type Configuration } from 'webpack'
 import path from 'path'
-import type { Configuration } from 'webpack'
+import { stringify, type UserscriptMetadata } from './src/util/metadata'
+import { userscripts } from './userscript'
 
 const cwd = process.cwd()
 const input = 'src'
@@ -18,34 +18,24 @@ const mode: 'development' | 'production' =
  */
 const devtool = process.env.DEVTOOL
 
-/** Script author */
-const author = process.env.npm_package_author ?? '???'
-/** Script namespace */
-const namespace = process.env.npm_package_homepage ?? '???'
-/** Script license */
-const copyright = process.env.npm_package_license ?? '???'
-
-/** Userscript metadata by chunk-name */
-export const userscriptMetadata: Record<string, UserscriptMetadata> = {
-  'khinsider-album-dl': {
-    description: 'Download khinsider albums',
-    name: 'khinsider-album-dl',
-    namespace,
-    author,
-    icon: 'https://downloads.khinsider.com/images/favicon.ico',
-    grant: ['GM_download'],
-    match: 'https://downloads.khinsider.com/game-soundtracks/album/*',
-    exclude: 'https://downloads.khinsider.com/game-soundtracks/album/**/*',
-    'run-at': 'document-end',
-    copyright,
-    version: '1.0.1',
-  },
+/**
+ * Create webpack BannerPlugin from userscript metadata
+ * @param meta
+ * @returns
+ */
+const createMetadataBannerPlugin = (metadata: UserscriptMetadata): BannerPlugin => {
+  return new BannerPlugin({
+    banner: stringify(metadata),
+    raw: true,
+    include: [metadata.name],
+  })
 }
 
 /** Webpack configuration */
-export default {
+const config: Configuration = {
   devtool,
   entry: {
+    'favicon-store': path.join(cwd, input, 'favicon-store.ts'),
     'khinsider-album-dl': path.join(cwd, input, 'khinsider-album-dl.ts'),
   },
   externals: {
@@ -77,11 +67,8 @@ export default {
     ],
   },
   plugins: [
-    new BannerWebpackPlugin({
-      banner: metadata.stringify(userscriptMetadata['khinsider-album-dl']),
-      raw: true,
-      include: ['khinsider'],
-    }),
+    createMetadataBannerPlugin(userscripts['favicon-store']),
+    createMetadataBannerPlugin(userscripts['khinsider-album-dl']),
   ],
   optimization: {
     minimize: mode === 'production',
@@ -97,4 +84,5 @@ export default {
       }),
     ],
   },
-} satisfies Configuration
+}
+export default config

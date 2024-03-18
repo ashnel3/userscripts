@@ -1,4 +1,5 @@
 export interface UserscriptMetadata extends Partial<VMScriptGMInfoScriptMeta> {
+  name: string
   copyright?: string
   exclude?: string | string[]
   match?: string | string[]

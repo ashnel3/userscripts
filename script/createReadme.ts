@@ -1,7 +1,7 @@
 import { writeFile } from 'fs/promises'
 import path from 'path'
 import prettier from 'prettier'
-import { userscriptMetadata } from '../webpack.config'
+import { userscripts } from '../userscript'
 
 /** Template README */
 const tREADME = (): string => {
@@ -19,7 +19,7 @@ A userscript manager:
 ### Scripts:
 | Name | Description | Install | Version |
 |---|---|
-${Object.entries(userscriptMetadata)
+${Object.entries(userscripts)
   .map(
     ([name, meta]) =>
       `| ${name} | ${meta.description} | [install](https://github.com/ashnel3/userscripts/raw/build/${name}.user.js) | ${meta.version}`,
