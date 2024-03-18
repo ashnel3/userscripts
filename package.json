@@ -14,7 +14,7 @@
     "lint:fmt": "prettier --list-different \"**/*.{md,cjs,js,json,ts,yaml,yml}\"",
     "readme": "pnpm vite-node script/createReadme.ts",
     "test": "vitest --run",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
