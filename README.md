@@ -16,4 +16,5 @@ A userscript manager:
 
 | Name               | Description               | Install                                                                                | Version |
 | ------------------ | ------------------------- | -------------------------------------------------------------------------------------- | ------- |
+| favicon-store      | Store favicon URLs        | [install](https://github.com/ashnel3/userscripts/raw/build/favicon-store.user.js)      | 1.0.0   |
 | khinsider-album-dl | Download khinsider albums | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-album-dl.user.js) | 1.0.1   |
