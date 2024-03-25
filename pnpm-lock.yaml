@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@violentmonkey/dom':
-    specifier: ^2.1.5
-    version: 2.1.5
+    specifier: ^2.1.6
+    version: 2.1.6
   '@violentmonkey/ui':
     specifier: ^0.7.8
     version: 0.7.8
@@ -1306,6 +1306,13 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.1
 
+  /@babel/runtime@7.24.1:
+    resolution: {integrity: sha512-+BIznRzyqBf+2wCTxcKE3wDjfGeCoVE61KSHGpkzqrLi8qxqFwBeUFyId2cxkTmm55fzDGnm0+yCxaxygrLUnQ==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.14.1
+    dev: false
+
   /@babel/template@7.24.0:
     resolution: {integrity: sha512-Bkf2q8lMB0AFpX0NFEqSbx1OkTHf0f+0j82mkw+ZpzBnkk7e9Ql0891vlfgi+kHwOk8tQjiQHpqh4LaSa0fKEA==}
     engines: {node: '>=6.9.0'}
@@ -1603,7 +1610,7 @@ packages:
   /@gera2ld/jsx-dom@2.2.2:
     resolution: {integrity: sha512-EOqf31IATRE6zS1W1EoWmXZhGfLAoO9FIlwTtHduSrBdud4npYBxYAkv8dZ5hudDPwJeeSjn40kbCL4wAzr8dA==}
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.24.1
     dev: false
 
   /@humanwhocodes/config-array@0.11.14:
@@ -1995,12 +2002,12 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@violentmonkey/dom@2.1.5:
-    resolution: {integrity: sha512-X+vZ2PYk5TdQWaCPJ43boa7FuDPlH6a9XB7pA8w7bl7qFcem6VkKFvipZnAYPumK13d1C9VqtFOcL3qrvczwJQ==}
+  /@violentmonkey/dom@2.1.6:
+    resolution: {integrity: sha512-T7KOzgp7/bK7qlDVAt3fM8G69NYHA+a8AyXj1Zc0tSkq0Z8BYOsqg62KNfBRLfltGSYXgQmqjwj6RqFm1TrXhA==}
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.24.1
       '@gera2ld/jsx-dom': 2.2.2
-      solid-js: 1.8.8
+      solid-js: 1.8.16
     dev: false
 
   /@violentmonkey/types@0.1.7:
@@ -2011,7 +2018,7 @@ packages:
     resolution: {integrity: sha512-yjxOYu2LZVtK/XH4rROkOwIw2bpw5mAeu6fe7dy4d+6lcspcJ1/gzU4Tqr6+ji2A6GgMHuKqSt6gij9P/cjQpA==}
     dependencies:
       '@babel/runtime': 7.23.7
-      '@violentmonkey/dom': 2.1.5
+      '@violentmonkey/dom': 2.1.6
     dev: false
 
   /@vitest/expect@1.4.0:
@@ -4533,8 +4540,17 @@ packages:
       randombytes: 2.1.0
     dev: true
 
-  /seroval@1.0.2:
-    resolution: {integrity: sha512-buswWxRzf65ZGUk8MAf3qVtBJHbe5gq6hZyPeqlJCKEIl/tEhUZze0YJg7vB7tFRGgPeneRaP083OB/vDiYLvA==}
+  /seroval-plugins@1.0.5(seroval@1.0.5):
+    resolution: {integrity: sha512-8+pDC1vOedPXjKG7oz8o+iiHrtF2WswaMQJ7CKFpccvSYfrzmvKY9zOJWCg+881722wIHfwkdnRmiiDm9ym+zQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      seroval: ^1.0
+    dependencies:
+      seroval: 1.0.5
+    dev: false
+
+  /seroval@1.0.5:
+    resolution: {integrity: sha512-TM+Z11tHHvQVQKeNlOUonOWnsNM+2IBwZ4vwoi4j3zKzIpc5IDw8WPwCfcc8F17wy6cBcJGbZbFOR0UCuTZHQA==}
     engines: {node: '>=10'}
     dev: false
 
@@ -4598,11 +4614,12 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /solid-js@1.8.8:
-    resolution: {integrity: sha512-9CtL5xWTYX1WWjQKqht3Tl0AJzgz4YWVQk8hoscO9TzRCgzlpAauEOexXa6bPG30W+fWLnFVE7XUiAzQFNeUKw==}
+  /solid-js@1.8.16:
+    resolution: {integrity: sha512-rja94MNU9flF3qQRLNsu60QHKBDKBkVE1DldJZPIfn2ypIn3NV2WpSbGTQIvsyGPBo+9E2IMjwqnqpbgfWuzeg==}
     dependencies:
       csstype: 3.1.3
-      seroval: 1.0.2
+      seroval: 1.0.5
+      seroval-plugins: 1.0.5(seroval@1.0.5)
     dev: false
 
   /source-map-js@1.0.2:
