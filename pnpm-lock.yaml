@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@violentmonkey/dom':
-    specifier: ^2.1.6
-    version: 2.1.6
+    specifier: ^2.1.7
+    version: 2.1.7
   '@violentmonkey/ui':
     specifier: ^0.7.8
     version: 0.7.8
@@ -2057,8 +2057,8 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
-  /@violentmonkey/dom@2.1.6:
-    resolution: {integrity: sha512-T7KOzgp7/bK7qlDVAt3fM8G69NYHA+a8AyXj1Zc0tSkq0Z8BYOsqg62KNfBRLfltGSYXgQmqjwj6RqFm1TrXhA==}
+  /@violentmonkey/dom@2.1.7:
+    resolution: {integrity: sha512-A08NQ/Sp1vUqkWNXgfLuL+j7VikIaojaN3TOo9KdHieYCGpwYab1BsaRFO3klcQhYsmUgRRAQjuDS/i/G2LvbQ==}
     dependencies:
       '@babel/runtime': 7.24.1
       '@gera2ld/jsx-dom': 2.2.2
@@ -2073,7 +2073,7 @@ packages:
     resolution: {integrity: sha512-yjxOYu2LZVtK/XH4rROkOwIw2bpw5mAeu6fe7dy4d+6lcspcJ1/gzU4Tqr6+ji2A6GgMHuKqSt6gij9P/cjQpA==}
     dependencies:
       '@babel/runtime': 7.23.7
-      '@violentmonkey/dom': 2.1.6
+      '@violentmonkey/dom': 2.1.7
     dev: false
 
   /@vitest/expect@1.4.0:
