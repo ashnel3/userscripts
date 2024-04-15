@@ -9,8 +9,8 @@ dependencies:
     specifier: ^2.1.7
     version: 2.1.7
   '@violentmonkey/ui':
-    specifier: ^0.7.8
-    version: 0.7.8
+    specifier: ^0.7.9
+    version: 0.7.9
 
 devDependencies:
   '@babel/core':
@@ -1334,13 +1334,6 @@ packages:
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
     dev: true
 
-  /@babel/runtime@7.23.7:
-    resolution: {integrity: sha512-w06OXVOFso7LcbzMiDGt+3X7Rh7Ho8MmgPoWU3rarH+8upf+wSU/grlGbWzQyr3DkdN6ZeuMFjpdwW0Q+HxobA==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.14.1
-    dev: false
-
   /@babel/runtime@7.24.1:
     resolution: {integrity: sha512-+BIznRzyqBf+2wCTxcKE3wDjfGeCoVE61KSHGpkzqrLi8qxqFwBeUFyId2cxkTmm55fzDGnm0+yCxaxygrLUnQ==}
     engines: {node: '>=6.9.0'}
@@ -2069,10 +2062,10 @@ packages:
     resolution: {integrity: sha512-1czfk2Kevw8KlUCbqnzNJBtIJiSG0y3s3hHT12D08OivyNGO2OioKsfJ7BedRFE4KkxRDudf33K2xxDhRtQp+g==}
     dev: true
 
-  /@violentmonkey/ui@0.7.8:
-    resolution: {integrity: sha512-yjxOYu2LZVtK/XH4rROkOwIw2bpw5mAeu6fe7dy4d+6lcspcJ1/gzU4Tqr6+ji2A6GgMHuKqSt6gij9P/cjQpA==}
+  /@violentmonkey/ui@0.7.9:
+    resolution: {integrity: sha512-Mh7oPRHi4nLuhG+4jtlZ9MZFlWkdCnnSaaNlQAtczkLW0hIteYP7b0ZjOAh38EjkPJGmVa4sMcSv37mhVVoWMw==}
     dependencies:
-      '@babel/runtime': 7.23.7
+      '@babel/runtime': 7.24.1
       '@violentmonkey/dom': 2.1.7
     dev: false
 
