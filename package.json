@@ -31,7 +31,7 @@
   "homepage": "https://github.com/ashnel3/userscripts#readme",
   "dependencies": {
     "@violentmonkey/dom": "^2.1.7",
-    "@violentmonkey/ui": "^0.7.8"
+    "@violentmonkey/ui": "^0.7.9"
   },
   "devDependencies": {
     "@babel/core": "^7.24.6",
