@@ -1,11 +1,11 @@
-import type { UserscriptMetadata } from 'src/util/metadata'
+import type { UserscriptMetadata } from './src/util/metadata'
 
-/** Script author */
-const author = process.env.npm_package_author ?? '???'
-/** Script namespace */
-const namespace = process.env.npm_package_homepage ?? '???'
-/** Script license */
-const copyright = process.env.npm_package_license ?? '???'
+const {
+  npm_package_author: author,
+  npm_package_homepage: namespace,
+  npm_package_license: copyright,
+} = process.env
+
 /** Userscript metadata */
 export const userscripts = {
   'favicon-store': {
@@ -32,3 +32,5 @@ export const userscripts = {
     version: '1.0.1',
   },
 } satisfies Record<string, UserscriptMetadata>
+
+export default userscripts

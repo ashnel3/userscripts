@@ -1,8 +1,8 @@
 import TerserWebpackPlugin from 'terser-webpack-plugin'
 import { BannerPlugin, type Configuration } from 'webpack'
 import path from 'path'
-import { stringify, type UserscriptMetadata } from './src/util/metadata'
-import { userscripts } from './userscript'
+import meta from './src/util/metadata'
+import userscripts from './userscript'
 
 const cwd = process.cwd()
 const input = 'src'
@@ -18,26 +18,13 @@ const mode: 'development' | 'production' =
  */
 const devtool = process.env.DEVTOOL
 
-/**
- * Create webpack BannerPlugin from userscript metadata
- * @param meta
- * @returns
- */
-const createMetadataBannerPlugin = (metadata: UserscriptMetadata): BannerPlugin => {
-  return new BannerPlugin({
-    banner: stringify(metadata),
-    raw: true,
-    include: [metadata.name],
-  })
-}
-
 /** Webpack configuration */
 const config: Configuration = {
   devtool,
-  entry: {
-    'favicon-store': path.join(cwd, input, 'favicon-store.ts'),
-    'khinsider-album-dl': path.join(cwd, input, 'khinsider-album-dl.ts'),
-  },
+  entry: Object.keys(userscripts).reduce(
+    (acc, cur) => ({ ...acc, [cur]: path.join(cwd, input, cur) }),
+    {},
+  ),
   externals: {
     '@violentmonkey/dom': 'VM',
     '@violentmonkey/ui': 'VM',
@@ -66,10 +53,13 @@ const config: Configuration = {
       },
     ],
   },
-  plugins: [
-    createMetadataBannerPlugin(userscripts['favicon-store']),
-    createMetadataBannerPlugin(userscripts['khinsider-album-dl']),
-  ],
+  plugins: Object.values(userscripts).map((data) => {
+    return new BannerPlugin({
+      banner: meta.stringify(data),
+      raw: true,
+      include: [data.name],
+    })
+  }),
   optimization: {
     minimize: mode === 'production',
     minimizer: [
