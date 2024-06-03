@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^7.24.1
     version: 7.24.1(@babel/core@7.24.6)
   '@babel/register':
-    specifier: ^7.23.7
-    version: 7.23.7(@babel/core@7.24.6)
+    specifier: ^7.24.6
+    version: 7.24.6(@babel/core@7.24.6)
   '@types/node':
     specifier: ^20.12.7
     version: 20.12.7
@@ -1425,8 +1425,8 @@ packages:
       '@babel/plugin-transform-typescript': 7.24.4(@babel/core@7.24.6)
     dev: true
 
-  /@babel/register@7.23.7(@babel/core@7.24.6):
-    resolution: {integrity: sha512-EjJeB6+kvpk+Y5DAkEAmbOBEFkh9OASx0huoEkqYTFxAZHzOAX2Oh5uwAUuL2rUddqfM0SA+KPXV2TbzoZ2kvQ==}
+  /@babel/register@7.24.6(@babel/core@7.24.6):
+    resolution: {integrity: sha512-WSuFCc2wCqMeXkz/i3yfAAsxwWflEgbVkZzivgAmXl/MxrXeoYFZOOPllbC8R8WTF7u61wSRQtDVZ1879cdu6w==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
