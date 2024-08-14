@@ -29,4 +29,10 @@ export default [
     files: ['**/*.{js,mjs,cjs,ts}'],
     languageOptions: { globals: { ...globals.browser, ...globals.node, ...globals.greasemonkey } },
   },
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': 1,
+      'prettier/prettier': 1,
+    },
+  },
 ]
