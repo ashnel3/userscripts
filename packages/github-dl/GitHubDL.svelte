@@ -16,8 +16,8 @@
   export let meta: UserscriptMeta
   export let username: string
 
-  const BRANCH = meta?.['config.branch'] ?? ''
-  const FORMAT = meta?.['config.format'] ?? 'zipball'
+  const BRANCH: string = meta?.['config.branch'] ?? ''
+  const FORMAT: string = meta?.['config.format'] ?? 'zipball'
   const LOG_STYLES = styleSerialize({ color: '#a6e22a', background: '#000' })
 
   console.log(`%c[${meta.name}]:`, LOG_STYLES, `initialized ${meta.name} v${meta.version}`)
@@ -38,7 +38,7 @@
       console.log(`  - downloading repository '${repo.name}' ${repo.html_url}`)
       GM_download({
         name: `${repo.name}.${FORMAT === 'zipball' ? 'zip' : 'tar.gz'}`,
-        url: repo.archive_url.replace('{archive_format}', FORMAT).replace('{/ref}', BRANCH),
+        url: repo.archive_url.replace('{archive_format}', FORMAT).replace('{/ref}', '/' + BRANCH),
       })
     })
   }
