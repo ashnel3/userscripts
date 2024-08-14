@@ -48,7 +48,7 @@
         if (a !== null && play !== null) {
           play.click()
           GM_download({
-            name: filename(FORMAT_TRACK, i + 1, 'mp3').replace('{title}', a.innerText),
+            name: filename(FORMAT_TRACK.replace('{title}', a.innerText), i + 1, 'mp3'),
             url: audio.src,
           })
         }
