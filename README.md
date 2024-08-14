@@ -21,3 +21,4 @@ Requires a userscript manager.
 | Name                                    | Description                                   | Version | Install                                                                          |
 | --------------------------------------- | --------------------------------------------- | ------- | -------------------------------------------------------------------------------- |
 | [khinsider-dl](./packages/khinsider-dl) | download "downloads.khinsider.com" vgm albums | 2.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-dl.user.js) |
+| [github-dl](./packages/github-dl)       | export github repositories                    | 1.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/github-dl.user.js)    |
