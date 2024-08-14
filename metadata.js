@@ -35,7 +35,7 @@ export default [
     /** Can either be "tarball" or "zipball". */
     'config.format': 'zipball',
     author,
-    icon: 'https://downloads.khinsider.com/images/favicon.ico',
+    icon: 'https://github.com/favicon.ico',
     grant: ['GM_download'],
     namespace,
     match: ['https://github.com/*'],
