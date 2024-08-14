@@ -1,19 +1,13 @@
 import BannerPlugin from 'webpack/lib/BannerPlugin.js'
 import TerserPlugin from 'terser-webpack-plugin'
-import UserscriptMeta from './packages/lib/util/metadata.js'
+import metadata from './metadata.js'
 import path from 'path'
 import { sveltePreprocess } from 'svelte-preprocess'
 
 /** Input directory */
-export const input = 'packages'
+const input = 'packages'
 /** Output directory */
-export const output = 'dist'
-
-const {
-  npm_package_homepage: namespace,
-  npm_package_license: copyright,
-  npm_package_author: author,
-} = process.env
+const output = 'dist'
 
 /** Build mode */
 const mode = process.env.NODE_ENV === 'development' ? 'development' : 'production'
@@ -22,28 +16,6 @@ const prod = mode === 'production'
 
 /** Build sourcemaps */
 const sourcemap = process.env.SOURCEMAP === 'true'
-
-/**
- * Userscript metadata
- * @type {UserscriptMeta[]}
- */
-export const metadata = [
-  new UserscriptMeta({
-    'config.cover-format': 'cover ({index}).{ext}',
-    'config.track-format': '({index}) {title} - {album}.{ext}',
-    author,
-    description: 'download "downloads.khinsider.com" vgm albums',
-    icon: 'https://downloads.khinsider.com/images/favicon.ico',
-    grant: ['GM_download'],
-    name: 'khinsider-dl',
-    namespace,
-    match: ['https://downloads.khinsider.com/game-soundtracks/album/*'],
-    exclude: ['https://downloads.khinsider.com/game-soundtracks/album/**/*'],
-    copyright,
-    'run-at': 'document-end',
-    version: '2.0.0',
-  }),
-]
 
 /** @type {import('webpack').Configuration} */
 export default {

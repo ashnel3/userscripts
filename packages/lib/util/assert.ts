@@ -17,7 +17,7 @@ export const assert = <T>(expr: T, msg?: string): NonNullable<T> => {
  * @param msg      error message
  * @returns        html element
  */
-export const assertQuery = <E extends Element = Element>(selector: string, msg?: string): E => {
+export const assertQuery = <E extends Element = HTMLElement>(selector: string, msg?: string): E => {
   return assert(document.querySelector<E>(selector), msg)
 }
 

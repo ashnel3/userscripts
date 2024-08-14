@@ -1,7 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
 import prettier from 'prettier'
-import { input, metadata } from '../webpack.config.js'
+import metadata from '../metadata.js'
 
 /**
  * template link
@@ -29,7 +29,7 @@ const template = async () => {
 <br />
 <br />
 <p align="center">
-  <img width="33%" src="./${input}/lib/asset/extension.svg" />
+  <img width="33%" src="./packages/lib/asset/extension.svg" />
 </p>
 <br />
 <p align="center">miscellaneous <a href="https://en.wikipedia.org/wiki/Userscript">userscripts</a></p>
@@ -48,7 +48,7 @@ Requires a userscript manager.
 ${metadata
   .map(({ name, description, version }) =>
     tRow(
-      tLink(name, `./${input}/${name}`),
+      tLink(name, `./packages/${name}`),
       description ?? '...',
       version,
       tLink('install', `https://github.com/ashnel3/userscripts/raw/build/${name}.user.js`),

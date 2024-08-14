@@ -73,7 +73,7 @@
 </button>
 <span use:style={{ float: 'right' }}>
   <p title="created by {meta.author ?? '???'}">
-    <a href={meta.namespace} rel="noopener noreferrer" target="_blank">khinsider-dl</a>
+    <a href={meta.namespace} rel="noopener noreferrer" target="_blank">{meta.name}</a>
     <span>v{meta.version}</span>
   </p>
 </span>
