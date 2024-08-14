@@ -1,0 +1,65 @@
+{
+  "name": "userscripts",
+  "description": "miscellaneous userscripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development SOURCEMAP=true webpack --watch",
+    "build": "webpack",
+    "build:dev": "cross-env NODE_ENV=development SOURCEMAP=true webpack",
+    "fmt": "prettier -cw .",
+    "lint": "pnpm run /^lint:.*/",
+    "lint:es": "eslint .",
+    "lint:fmt": "prettier -l .",
+    "lint:svelte": "svelte-check --tsconfig tsconfig.json",
+    "readme": "node scripts/create-readme.js",
+    "test": "echo \"TODO: tests!\"",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/userscripts.git"
+  },
+  "keywords": [
+    "userscripts",
+    "scripts"
+  ],
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ashnel3/userscripts/issues"
+  },
+  "homepage": "https://github.com/ashnel3/userscripts#readme",
+  "engines": {
+    "node": ">= 18"
+  },
+  "engineStrict": true,
+  "packageManager": "pnpm@9.5.0",
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@tsconfig/svelte": "^5.0.4",
+    "@types/node": "^22.2.0",
+    "@violentmonkey/types": "^0.1.9",
+    "cross-env": "^7.0.3",
+    "esbuild-loader": "^4.2.2",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-svelte": "^2.43.0",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.6",
+    "svelte": "^4.2.18",
+    "svelte-check": "^3.8.5",
+    "svelte-loader": "^3.2.3",
+    "svelte-preprocess": "^6.0.2",
+    "terser-webpack-plugin": "^5.3.10",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0",
+    "vitest": "^2.0.5",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
+}

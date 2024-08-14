@@ -1,0 +1,28 @@
+* text=auto
+
+# Document
+*.md                      text
+*.txt                     text
+
+# Shell
+.husky/*                  text eol=lf
+*.sh                      text eol=lf
+
+# Config
+*.json                    text
+*.yaml                    text
+*.yml                     text
+
+# Components
+*.html                    text
+*.svelte                  text
+
+# Source
+*.js                      text
+*.ts                      text
+
+# Images
+*.jpeg                    binary
+*.jpg                     binary
+*.png                     binary
+*.svg                     binary

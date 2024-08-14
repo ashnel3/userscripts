@@ -1,0 +1,20 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "allowArbitraryExtensions": true,
+    "resolveJsonModule": true,
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": false,
+    "noEmit": true,
+    "rootDir": "./",
+    "baseUrl": "./",
+    "paths": {
+      "$action/*": ["packages/lib/action/*"],
+      "$asset/*": ["packages/lib/asset/*"],
+      "$util/*": ["packages/lib/util/*"],
+      "$lib": ["packages/lib/*"]
+    }
+  },
+  "include": ["**/*"],
+  "exclude": ["dist/**/*"]
+}
