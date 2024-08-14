@@ -13,7 +13,7 @@
 // @config.skip-forks false
 // @config.format zipball
 // @author ashnel3
-// @icon https://downloads.khinsider.com/images/favicon.ico
+// @icon https://github.com/favicon.ico
 // @namespace https://github.com/ashnel3/userscripts#readme
 // @run-at document-end
 // @copyright GPL-3.0
