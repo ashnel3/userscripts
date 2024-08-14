@@ -46,6 +46,7 @@ Requires a userscript manager.
 | Name | Description | Version | Install |
 | --- | --- | --- | --- |
 ${metadata
+  .sort((a, b) => a.name.localeCompare(b.name))
   .map(({ name, description, version }) =>
     tRow(
       tLink(name, `./packages/${name}`),
