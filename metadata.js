@@ -12,6 +12,17 @@ const {
  */
 export default [
   new UserscriptMeta({
+    author,
+    description: 'claim all coupons',
+    icon: 'https://www.albertsons.com/favicon.ico',
+    name: 'albertsons-claim',
+    namespace,
+    match: ['https://www.albertsons.com/foru/coupons-deals.htm*'],
+    copyright,
+    'run-at': 'document-end',
+    version: '1.0.0',
+  }),
+  new UserscriptMeta({
     'config.cover-format': 'cover ({index}).{ext}',
     'config.track-format': '({index}) {title} - {album}.{ext}',
     author,
