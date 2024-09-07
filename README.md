@@ -18,7 +18,8 @@ Requires a userscript manager.
 
 ## Scripts:
 
-| Name                                    | Description                                   | Version | Install                                                                          |
-| --------------------------------------- | --------------------------------------------- | ------- | -------------------------------------------------------------------------------- |
-| [github-dl](./packages/github-dl)       | export github repositories                    | 1.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/github-dl.user.js)    |
-| [khinsider-dl](./packages/khinsider-dl) | download "downloads.khinsider.com" vgm albums | 2.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-dl.user.js) |
+| Name                                            | Description                                   | Version | Install                                                                              |
+| ----------------------------------------------- | --------------------------------------------- | ------- | ------------------------------------------------------------------------------------ |
+| [albertsons-claim](./packages/albertsons-claim) | claim all coupons                             | 1.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/albertsons-claim.user.js) |
+| [github-dl](./packages/github-dl)               | export github repositories                    | 1.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/github-dl.user.js)        |
+| [khinsider-dl](./packages/khinsider-dl)         | download "downloads.khinsider.com" vgm albums | 2.0.0   | [install](https://github.com/ashnel3/userscripts/raw/build/khinsider-dl.user.js)     |
