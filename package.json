@@ -1,0 +1,45 @@
+{
+  "name": "@userscripts/root",
+  "version": "0.1.0",
+  "description": "misc userscripts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build",
+    "fmt": "prettier -cw .",
+    "fmt-check": "prettier -l .",
+    "test": "vitest --run",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/userscripts.git"
+  },
+  "keywords": [
+    "userscripts"
+  ],
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/ashnel3/userscripts/issues",
+  "homepage": "https://github.com/ashnel3/userscripts#readme",
+  "packageManager": "pnpm@9.15.2",
+  "engines": {
+    "node": ">= 18",
+    "pnpm": ">= 9"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "@material-icons/svg": "^1.0.33",
+    "preact": "^10.25.3"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.9.3",
+    "@types/node": "^22.10.7",
+    "husky": "^9.1.7",
+    "prettier": "^3.4.2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vite-plugin-svgr": "^4.3.0",
+    "vite-userscript-plugin": "^1.11.0",
+    "vitest": "^3.0.2"
+  }
+}

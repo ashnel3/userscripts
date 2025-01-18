@@ -1,0 +1,27 @@
+* text=auto
+
+# Document
+*.md                 text
+*.txt                text
+
+# Config
+*.json               text
+*.yaml               text
+*.yml                text
+
+# Source
+*.js                 text
+*.ts                 text
+*.tsx                text
+
+# Style
+*.css                text
+
+# Image
+*.gif
+*.jpeg               binary
+*.jpg                binary
+*.png                binary
+*.webp               binary
+*.webm               binary
+*.svg                text
