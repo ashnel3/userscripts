@@ -1,8 +1,8 @@
 import { FORMATS } from './const'
 
 import { useEffect } from 'preact/hooks'
-import { useFetch } from '@lib/hook/fetch'
-import log from '@util/log'
+import { useFetch } from '@userscripts/lib/hook/fetch'
+import log from '@userscripts/lib/log'
 
 // assets
 import DownloadIcon from '@material-icons/svg/svg/download/round.svg?react'

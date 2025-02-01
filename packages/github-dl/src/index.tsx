@@ -1,7 +1,7 @@
 import App from './App'
 import * as Preact from 'preact'
-import * as assert from '@util/assert'
-import log from '@util/log'
+import * as assert from '@userscripts/lib/assert'
+import log from '@userscripts/lib/log'
 
 log('initializing...')
 

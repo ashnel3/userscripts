@@ -1,0 +1,15 @@
+{
+  "name": "@userscripts/lib",
+  "version": "0.0.0",
+  "description": "common functionality",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/userscripts.git",
+    "directory": "packages/github-dl"
+  },
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/ashnel3/userscripts/issues",
+  "homepage": "https://github.com/ashnel3/userscripts#readme"
+}

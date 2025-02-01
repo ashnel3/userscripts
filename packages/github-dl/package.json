@@ -1,0 +1,21 @@
+{
+  "name": "@userscripts/github-dl",
+  "version": "0.1.0",
+  "description": "github downloader",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b && vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/userscripts.git",
+    "directory": "packages/github-dl"
+  },
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/ashnel3/userscripts/issues",
+  "homepage": "https://github.com/ashnel3/userscripts#readme",
+  "peerDependencies": {
+    "@userscripts/lib": "workspace:*"
+  }
+}
