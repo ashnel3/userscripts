@@ -1,0 +1,23 @@
+{
+  "name": "@userscripts/lib",
+  "description": "userscripts common library",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./config/tsconfig.app.json": "./config/tsconfig.app.json",
+    "./config/tsconfig.node.json": "./config/tsconfig.node.json",
+    "./config": "./config/index.ts",
+    "./assert": "./assert.ts",
+    "./hook/fetch": "./hook/fetch.ts",
+    "./types/client": "./types/client.d.ts"
+  },
+  "repository": {
+    "directory": "packages/lib",
+    "url": "git@github.com:ashnel3/userscripts.git",
+    "type": "ssh"
+  },
+  "peerDependencies": {
+    "preact": "^10.27.0"
+  }
+}

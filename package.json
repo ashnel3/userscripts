@@ -1,0 +1,48 @@
+{
+  "name": "@root/userscripts",
+  "version": "0.0.0",
+  "description": "userscripts monorepo root",
+  "private": true,
+  "scripts": {
+    "build": "pnpm -r run build",
+    "format": "prettier -cw .",
+    "format-check": "prettier -l .",
+    "lint": "pnpm run /^lint:.*/",
+    "lint:tsc": "tsc -b .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "repository": {
+    "url": "git@github.com:ashnel3/userscripts.git",
+    "type": "ssh"
+  },
+  "engines": {
+    "node": ">= 22",
+    "pnpm": ">= 10"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "preact": "^10.27.0"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.3",
+    "@preact/preset-vite": "^2.10.2",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@types/node": "^24.3.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "unplugin-icons": "^22.2.0",
+    "vite": "^7.1.2",
+    "vite-node": "^3.2.4",
+    "vite-userscript-plugin": "^1.11.0"
+  }
+}

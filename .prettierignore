@@ -1,0 +1,10 @@
+# Miscellaneous
+public/
+
+# Lock Files
+package-lock.json
+pnpm-lock.yaml
+Cargo.lock
+yarn.lock
+bun.lock
+bun.lockb

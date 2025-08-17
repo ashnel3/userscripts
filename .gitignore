@@ -1,3 +1,7 @@
+# Editor Files
+.vscode
+.idea
+
 # Logs
 logs
 *.log
@@ -6,6 +10,10 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+
+# OS Files
+.directory
+.DS_Store
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

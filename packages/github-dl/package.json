@@ -1,0 +1,25 @@
+{
+  "name": "github-dl",
+  "description": "github downloading tool",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vite build --watch",
+    "build": "vite build",
+    "lint": "pnpm --workspace-root run lint",
+    "format": "pnpm --workspace-root run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ashnel3/userscripts.git",
+    "directory": "packages/github-dl"
+  },
+  "author": "ashnel3",
+  "license": "GPL-3.0",
+  "bugs": "https://github.com/ashnel3/userscripts/issues",
+  "homepage": "https://github.com/ashnel3/userscripts#readme",
+  "peerDependencies": {
+    "@userscripts/lib": "workspace:*"
+  }
+}
