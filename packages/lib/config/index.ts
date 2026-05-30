@@ -4,9 +4,7 @@ import { readFile } from 'node:fs/promises'
 // plugins
 import icons from 'unplugin-icons/vite'
 import preact from '@preact/preset-vite'
-import userscript, { type UserscriptPluginConfig } from 'vite-userscript-plugin'
-
-export type UserscriptHeaders = UserscriptPluginConfig['header']
+import userscript, { type MonkeyUserScript } from 'vite-plugin-monkey'
 
 /**
  * load userscript headers
@@ -14,10 +12,10 @@ export type UserscriptHeaders = UserscriptPluginConfig['header']
  * @returns userscript headers
  */
 export const defineHeaders = async (
-  headers: Partial<UserscriptHeaders>,
-): Promise<UserscriptHeaders> => {
+  headers: Partial<MonkeyUserScript>,
+): Promise<MonkeyUserScript> => {
   const packageJSON = JSON.parse((await readFile('./package.json')).toString())
-  const base: UserscriptPluginConfig['header'] = {
+  const base: MonkeyUserScript = {
     name: packageJSON.name,
     description: packageJSON.description,
     version: packageJSON.version ?? '0.0.0',
@@ -38,7 +36,7 @@ export const defineHeaders = async (
 export const defineUserscriptConfig =
   (
     entry: string,
-    headers: Partial<UserscriptHeaders> = {},
+    headers: Partial<MonkeyUserScript> = {},
     overrides: UserConfig = {},
   ): UserConfigFn =>
   async (): Promise<UserConfig> => {
@@ -49,7 +47,7 @@ export const defineUserscriptConfig =
           preact(),
           userscript({
             entry,
-            header: await defineHeaders(headers),
+            userscript: await defineHeaders(headers),
           }),
         ],
       },

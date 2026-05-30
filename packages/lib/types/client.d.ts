@@ -1,3 +1,3 @@
-/// <reference types="unplugin-icons/types/preact" />
-/// <reference types="vite/client" />
-/// <reference types="vite-userscript-plugin/types/tampermonkey" />
+import 'vite/client'
+import 'vite-plugin-monkey/global'
+import 'unplugin-icons/types/preact'
